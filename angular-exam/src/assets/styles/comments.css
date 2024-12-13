@@ -1,0 +1,13 @@
+.show-comments {
+  border: solid white;
+  border-radius: 8px;
+  width: 350px;
+  margin-left: -120px;
+  margin-right: -70px;
+}
+
+ul {
+  color: white;
+  font-size: 30px;
+  margin-right: 20px;
+}

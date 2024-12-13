@@ -1,0 +1,15 @@
+<div *ngIf="isLoading">
+  <app-loader />
+</div>
+<div *ngIf="!isLoading">
+  <div *ngFor="let car of cars" class="car">
+    <div class="car-details">
+      <img [src]="car.imageUrl" alt="Car image" />
+      <h2>{{ car.brand }}</h2>
+      <h6>{{ car.model }}</h6>
+      <a [routerLink]="['/cars', car._id]" class="details-button">
+        More Details
+      </a>
+    </div>
+  </div>
+</div>

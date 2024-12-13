@@ -1,0 +1,28 @@
+<section id="edit-page" class="ed">
+  <div class="title">
+    <p>Edit Car Info</p>
+  </div>
+  <form [formGroup]="carForm" (ngSubmit)="onEdit()" id="carForm-edit">
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" formControlName="brand" required />
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" formControlName="model" required />
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" formControlName="price" min="1" required />
+
+    <label for="image">Image URL:</label>
+    <input type="text" id="imageUrl" formControlName="imageUrl" required />
+
+    <label for="description">Description:</label>
+    <textarea
+      id="description"
+      formControlName="description"
+      rows="4"
+      required
+    ></textarea>
+
+    <button type="submit" [disabled]="carForm.invalid">Submit</button>
+  </form>
+</section>

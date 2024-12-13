@@ -1,0 +1,77 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+
+.form-container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  margin: 30px auto;
+  background: transparent;
+  backdrop-filter: blur(5px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.register-link,
+.login-link {
+  margin-top: 15px;
+  color: #b83838;
+  font-size: 30px;
+}
+
+.register-link a,
+.login-link a {
+  color: #ff7b00;
+  text-decoration: none;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+h2,
+label {
+  color: white;
+}
+
+.requirements {
+  color: rgb(180, 67, 67);
+}

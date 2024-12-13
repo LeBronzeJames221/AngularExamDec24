@@ -1,0 +1,96 @@
+#home-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro-message h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 80px;
+  color: #812d2d;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 75, 214, 0.3);
+}
+
+#home-page img {
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 60%;
+  margin-left: auto;
+  padding-left: auto;
+}
+
+#recent-cars h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  color: #8b8383;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+}
+#recent-cars {
+  border: solid rgb(94, 41, 41);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.no-cars-added {
+  font-size: 20px;
+  color: #da3939;
+  margin-top: 10px;
+}
+
+.data-buttons {
+  color: white;
+  border: solid white;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.item {
+  text-align: center;
+  max-width: 300px;
+
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.item img {
+  border: solid white;
+  width: 300px;
+  max-height: 130px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.item h3 {
+  color: #8b8888;
+  margin-bottom: 10px;
+}
+
+.detail-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3d4042;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.detail-button:hover {
+  background-color: #0056b3;
+}

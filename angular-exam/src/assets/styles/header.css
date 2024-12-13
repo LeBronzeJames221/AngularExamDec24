@@ -1,0 +1,57 @@
+body {
+  background-image: url("../images/background-img.jpg");
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.div-header {
+  background-color: #333;
+  color: #634b77;
+  padding: 10px;
+  border: solid #812d2d;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+.home-page {
+  text-decoration: none;
+  color: #fff;
+}
+
+span {
+  margin-left: 20px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#logged-in,
+#not-logged-in {
+  display: flex;
+  gap: 10px;
+}
+
+#logged-in a,
+#not-logged-in a {
+  text-decoration: none;
+  color: white;
+}

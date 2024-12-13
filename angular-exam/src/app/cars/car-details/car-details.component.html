@@ -1,0 +1,70 @@
+<div class="car-details-container">
+  <div class="car-details">
+    <img [src]="car.imageUrl" [alt]="" />
+    <h2>{{ car.brand }}</h2>
+    <h6>{{ car.model }}</h6>
+    <p>Price:{{ car.price }} $</p>
+    <p>Description:{{ car.description }}</p>
+    <span>Creator:{{ car.creatorEmail }}</span>
+
+    <div class="del-edit-buttons" *ngIf="ownerId === userId">
+      <button class="button" (click)="editCar()">Edit</button>
+      <button class="button" (click)="deleteCar()">Delete</button>
+      <p>You are prohibited to comment or like your own creations!</p>
+    </div>
+
+    <div class="like-unlike" *ngIf="ownerId !== userId && userId">
+      <div>
+        <button *ngIf="carLikes === 0" class="button" (click)="likeCar()">
+          LIKE
+        </button>
+        <button *ngIf="carLikes === 1" class="button" (click)="likeCar()">
+          UNLIKE
+        </button>
+        <span *ngIf="carLikes === 1">&#x2764;</span>
+      </div>
+    </div>
+    <p class="not-logged-notif" *ngIf="!userId">
+      You have to be logged in to be able to comment or like!
+    </p>
+
+    <div class="comments" *ngIf="ownerId !== userId && userId">
+      <form class="form" [formGroup]="commentForm" (ngSubmit)="addComment()">
+        <textarea
+          formControlName="comment"
+          placeholder="Express Yourself..."
+          required
+        ></textarea>
+        <input
+          class="btn"
+          type="submit"
+          value="Add"
+          [disabled]="!commentForm.valid"
+        />
+      </form>
+    </div>
+  </div>
+
+  <div class="show-comments">
+    <p>COMMENTS</p>
+    <ul class="single-comment" *ngFor="let comment of carComments">
+      <li>
+        {{ comment.ownerEmail }}: {{ comment.comment }}
+        <button
+          class="button"
+          *ngIf="comment._ownerId === userId"
+          (click)="deleteComment(comment._id)"
+          style="
+            margin-left: 10px;
+            color: red;
+            border: none;
+            background: none;
+            cursor: pointer;
+          "
+        >
+          X
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

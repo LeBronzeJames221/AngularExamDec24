@@ -1,0 +1,6 @@
+<p *ngIf="!latestCars.length" class="no-cars-added">The Garage Is Empty</p>
+<div class="item" *ngFor="let car of latestCars">
+  <img [src]="car.imageUrl" alt="{{ car.brand }}" />
+  <h3>{{ car.brand }}</h3>
+  <a [routerLink]="['/cars', car._id]" class="detail-button"> Details </a>
+</div>

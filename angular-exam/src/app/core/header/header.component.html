@@ -1,0 +1,24 @@
+<div class="div-header">
+  <header>
+    <h1>
+      <a class="home-page" routerLink="/home">CarMania</a>
+    </h1>
+    <span *ngIf="user$ | async as user"
+      >Welcome Back, {{ user.email.split("@")[0].toUpperCase() }}</span
+    >
+
+    <nav>
+      <a routerLink="/cars">Garage</a>
+
+      <div id="logged-in" *ngIf="user$ | async as user">
+        <a routerLink="/cars/create">Create A Car</a>
+        <a routerLink="/profile">Profile</a>
+        <a (click)="logout()">Logout</a>
+      </div>
+
+      <div id="not-logged-in" *ngIf="!(user$ | async)">
+        <a routerLink="/login">Sign In</a>
+      </div>
+    </nav>
+  </header>
+</div>

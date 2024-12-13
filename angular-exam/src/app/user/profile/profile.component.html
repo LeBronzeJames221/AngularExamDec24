@@ -1,0 +1,12 @@
+<section id="profile-page" class="profile">
+  <div class="profile-container">
+    <h2>My Profile</h2>
+    <div class="profile-info">
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Username:</strong> {{ user.username }}</p>
+      <p><strong>Account ID:</strong> {{ user._id }}</p>
+      <p><strong>Joined On:</strong> {{ user._createdOn | date }}</p>
+    </div>
+    <a routerLink="/my-cars" class="btn-my-cars">MY CARS</a>
+  </div>
+</section>
