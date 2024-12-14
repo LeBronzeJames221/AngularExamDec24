@@ -10,7 +10,6 @@ import { AuthService } from 'src/app/user/user.service';
 export class MyCarsComponent implements OnInit {
   cars: any[] = [];
   userId: string | null = '';
-  isLoading: boolean = true;
 
   constructor(
     private carService: CarService,
@@ -27,9 +26,6 @@ export class MyCarsComponent implements OnInit {
   loadCars(): void {
     this.carService.getAllCars().subscribe((data) => {
       this.cars = data.filter((car) => car._ownerId === this.userId);
-      setTimeout(() => {
-        this.isLoading = false;
-      }, 2000);
     });
   }
 }

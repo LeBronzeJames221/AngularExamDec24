@@ -33,6 +33,14 @@ export class CarService {
     return this.http.get<any[]>(this.baseUrl);
   }
 
+  // searchCarsByName(name: string): Observable<any[]> {
+  //   const query = `where=brand%3D%22${name.toUpperCase()}%22`;
+  //   return this.http.get<any[]>(`${this.baseUrl}?${query}`);
+  // }
+  searchCarsByName(query: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}?${query}`);
+  }
+
   getOneCar(carId: string): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/${carId}`);
   }

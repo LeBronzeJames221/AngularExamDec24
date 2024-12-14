@@ -55,3 +55,8 @@ nav a {
   text-decoration: none;
   color: white;
 }
+
+.search {
+  color: #c43b3b;
+  font-weight: 700;
+}

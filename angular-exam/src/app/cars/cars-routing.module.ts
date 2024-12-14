@@ -7,8 +7,13 @@ import { CarEditComponent } from './car-edit/car-edit.component';
 import { CarCreateComponent } from './car-create/car-create.component';
 import { AuthGuard } from './auth/auth.guard';
 import { MyCarsComponent } from './my-cars/my-cars.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 const routes: Routes = [
   { path: '', component: GarageComponent },
+  {
+    path: 'cars/search',
+    component: SearchPageComponent,
+  },
   {
     path: 'cars/create',
     component: CarCreateComponent,

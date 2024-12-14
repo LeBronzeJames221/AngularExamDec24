@@ -10,6 +10,7 @@ import { CarEditComponent } from './car-edit/car-edit.component';
 import { CarCreateComponent } from './car-create/car-create.component';
 import { MyCarsComponent } from './my-cars/my-cars.component';
 import { SharedModule } from '../shared/shared.module';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SharedModule } from '../shared/shared.module';
     CarEditComponent,
     CarCreateComponent,
     MyCarsComponent,
+    SearchPageComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,35 @@
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (keydown.enter)="onSearch()"
+    placeholder="Search cars by name..."
+    class="search-input"
+  />
+  <button (click)="onSearch()" class="search-btn">Search</button>
+</div>
+<div *ngIf="isLoading">
+  <app-loader />
+</div>
+
+<div *ngIf="!isLoading">
+  <div *ngIf="searchInitiated">
+    <div *ngIf="searchResults.length > 0" class="results-container">
+      <h3>Search Results:</h3>
+      <div *ngFor="let car of searchResults" class="car">
+        <div class="car-details">
+          <img [src]="car.imageUrl" alt="Car image" />
+          <h2>{{ car.brand }}</h2>
+          <h6>{{ car.model }}</h6>
+          <a [routerLink]="['/cars', car._id]" class="details-button">
+            More Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="searchResults.length === 0">
+      <p>No cars found matching "{{ searchTerm }}".</p>
+    </div>
+  </div>
+</div>
